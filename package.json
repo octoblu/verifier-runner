@@ -1,0 +1,48 @@
+{
+  "name": "@octoblu/verifier-runner",
+  "version": "1.0.0",
+  "description": "Simple library for running verifiers",
+  "main": "index.js",
+  "scripts": {
+    "start": "node command.js",
+    "test": "mocha",
+    "coverage": "nyc npm test",
+    "mocha:json": "mocha --reporter json > coverage/mocha.json",
+    "test:watch": "mocha -w -R mocha-multi --reporter-options spec=-,mocha-osx-reporter=-"
+  },
+  "nyc": {
+    "cache": true,
+    "reporter": [
+      "text-summary",
+      "lcov",
+      "json"
+    ],
+    "extension": [
+      ".coffee"
+    ]
+  },
+  "repository": "git@github.com:octoblu/verifier-runner.git",
+  "author": "Octoblu, Inc <npm@octoblu.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@octoblu/shmock": "^0.9.1",
+    "chai": "^3.5.0",
+    "chai-subset": "^1.5.0",
+    "env-test": "^1.0.0",
+    "mocha": "^3.3.0",
+    "mocha-multi": "^0.11.0",
+    "mocha-osx-reporter": "^0.1.2",
+    "nyc": "^10.2.0",
+    "server-destroy": "^1.0.1",
+    "sinon": "^2.1.0",
+    "sinon-chai": "^2.9.0"
+  },
+  "dependencies": {
+    "async": "^2.3.0",
+    "coffee-script": "^1.12.5",
+    "debug": "^2.6.4",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "request": "^2.81.0"
+  }
+}

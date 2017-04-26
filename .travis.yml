@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- '7'
+branches:
+  only:
+  - "/^v[0-9]/"
+deploy:
+  provider: npm
+  email: serveradmin@octoblu.com
+  api_key:
+    secure: qafjeUl9nxaIxW5/cq64M+yzsilhmdHzARDWVVeBSJOpN7K4nETn7hPiXPZbIhQCYpD78nY4akSaeXVg1OoRLCI6rJ0qOKGHec+JuaORshu6PZfUwHyjJrb1V9LEhjTnJtSgDJgjWbjLlkkmOLDfL7s3WWX5EQZ/vYCZxADxGhuU+AbaY2o06fn6LCILfTRgrZPkCp2Sz9SEgtGeZoqzbRDc9cvINxzebz6JhmCWmn3MOzgL4WUnnYlvQ42uNJIpmy1LH2hZF1SzC0FKPylbet3ofsFrq/Bhp9KdRULaRIZ37zhxpUHPRFrQf+ABFudIaydlzyuixmoui4d3nzbkAwtTtglJLSIt2p88QAJUQJRXl9ElTlwx3gG81zgKL10pTYrsi1XcLrF8T8pZR07Ysvo0gtBY/RcQXUiDw6Z4jtAp8gl+1n/kureqlAHpDLnF/OBnLYqvBZviTvmi6zUGbJR51MMp5ULdI3dAqS2osCUIfOOYeRnIXJ8Suoh4O5/qpGbyx+u9P4BKXGCnbuDKsr4lftfyE+1xkhiV26R49pSn3eGB4+aRR/0oFYFEeP82wmSrGhyt5d6mrB+a7eb5+ryklRPfgOQFwPcpDCc0EEtsZFSuMwo3XDE8lRCZfPrsIv1tR9rAvL5EKw84lPcC93kCpdOdadZmmD/NLotg4ko=
+  on:
+    tags: true
+    repo: octoblu/verifier-runner
